@@ -1,16 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.background {
-    background: url('../img/bg.jpg') repeat-x #1297b8;
+body {
+    background: url('../img/bg.jpg') repeat-x #0c739e;
 }
 
 .container {
     width: 1000px;
-    height: 988px;
     margin: 0 auto;
     background-color: #fff;
     box-shadow: -9px 5px 9px -5px rgba(0, 0, 0, .3),
@@ -26,7 +19,7 @@
 }
 
 .countries {
-    margin: 30px 30px 0;
+    margin: 30px 30px 0 0;
     float: right;
     clear: right;
 }
@@ -39,36 +32,40 @@
     display: block;
     width: 55px;
     margin-left: -3px;
-    padding-top: 43px;
-    background-repeat: no-repeat;
-    background-position: center top;
+    padding-top: 42px;
+    background: url('../img/flags.png') no-repeat;
     color: #128aa7;
     font: 10px Tahoma;
     text-align: center;
+    white-space: nowrap;
+}
+
+.countries a:hover {
+    text-decoration: none;
 }
 
 .india a {
-    background-image: url('../img/i_flag.png');
+    background-position: 7px 0;
 }
 
 .nepal a {
-    background-image: url('../img/n_flag.png');
+    background-position: -48px 0;
 }
 
 .tibet a {
-    background-image: url('../img/t_flag.png');
+    background-position: -103px 0;
 }
 
 .butane a {
-    background-image: url('../img/b_flag.png');
+    background-position: -158px 0;
 }
 
 .sri-lanka a {
-    background-image: url('../img/s_flag.png');
+    background-position: -213px 0;
 }
 
 .maldives a {
-    background-image: url('../img/m_flag.png');
+    background-position: -268px 0;
 }
 
 .logo {
@@ -108,8 +105,6 @@
 }
 
 .main-menu {
-    background: -moz-linear-gradient(top, rgba(202, 203, 203, 1) 0%, rgba(55, 55, 55, 1) 3%, rgba(48, 48, 48, 1) 85%, rgba(0, 0, 0, 1) 88%, rgba(0, 0, 0, .67) 91%, rgba(0, 0, 0, .5) 94%, rgba(0, 0, 0, .25) 97%, rgba(0, 0, 0, .08) 100%);
-    background: -webkit-linear-gradient(top, rgba(202, 203, 203, 1) 0%, rgba(55, 55, 55, 1) 3%, rgba(48, 48, 48, 1) 85%, rgba(0, 0, 0, 1) 88%, rgba(0, 0, 0, .67) 91%, rgba(0, 0, 0, .5) 94%, rgba(0, 0, 0, .25) 97%, rgba(0, 0, 0, .08) 100%);
     background: linear-gradient(to bottom, rgba(202, 203, 203, 1) 0%, rgba(55, 55, 55, 1) 3%, rgba(48, 48, 48, 1) 85%, rgba(0, 0, 0, 1) 88%, rgba(0, 0, 0, .67) 91%, rgba(0, 0, 0, .5) 94%, rgba(0, 0, 0, .25) 97%, rgba(0, 0, 0, .08) 100%);
 }
 
@@ -125,8 +120,17 @@
     text-decoration: none;
 }
 
-.main-menu img {
-    padding-left: 1px;
+.travel>a::after,
+.services>a::after,
+.partners>a::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin: 0 0 2px 5px;
+    border-top: 5px solid #fff;
+    border-right: 2px solid transparent;
+    border-left: 2px solid transparent;
+    content: '';
 }
 
 .main {
@@ -134,8 +138,7 @@
 }
 
 .travel {
-    padding-right: 49px;
-
+    padding-right: 51px;
 }
 
 .services {
@@ -143,7 +146,7 @@
 }
 
 .partners {
-    padding-right: 51px;
+    padding-right: 52px;
 }
 
 .reviews {
@@ -169,6 +172,14 @@
     z-index: 1;
 }
 
+.services .submenu {
+    width: 120px;
+}
+
+.partners .submenu {
+    width: 140px;
+}
+
 .submenu a {
     display: block;
     padding: 3px 9px;
@@ -177,79 +188,49 @@
     text-decoration: none;
 }
 
+.submenu a:hover {
+    padding-left: 12px;
+}
+
 .menu > li:hover >.submenu {
     display: block;
 }
 
-.bg-columns {
-    position: relative;
-    width: 1000px;
-    float: left;
-    background: url('../img/bg_columns.jpg') repeat-y;
-}
-
-.info-border-vert {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 208px;
-    height: 542px;
-    border-right: 1px solid #c7cacf;
-    border-left: 1px solid #c7cacf;
-}
-
-.info-border-hor {
-    position: absolute;
-    top: 147px;
-    left: 0;
-    width: 208px;
-    height: 257px;
-    border-top: 1px solid #c7cacf;
-    border-bottom: 1px solid #c7cacf;
-}
-
-.news-border-vert {
-    position: absolute;
-    top: 0;
-    left: 791px;
-    width: 208px;
-    height: 542px;
-    border-right: 1px solid #c7cacf;
-    border-left: 1px solid #c7cacf;
-}
-
-.news-border-hor {
-    position: absolute;
-    top: 291px;
-    left: 0;
-    width: 208px;
-    height: 174px;
-    border-top: 1px solid #c7cacf;
-    border-bottom: 1px solid #c7cacf;
+.columns-container {
+    padding-bottom: 10px;
+    overflow: hidden;
 }
 
 .info {
     position: relative;
     width: 210px;
-    padding-bottom: 9px;
+    margin-bottom: -20000px;
+    padding-bottom: 20000px;
     float: left;
-    overflow: hidden;
+    border-right: 1px solid #c7cacf;
+    border-left: 1px solid #c7cacf;
+    background-color: #edeef0;
+    box-sizing: border-box;
 }
 
 .content {
-    position: relative;
     width: 580px;
-    padding-bottom: 9px;
+    margin-bottom: -20000px;
+    padding-bottom: 20000px;
     float: left;
-    overflow: hidden;
+    background-color: #fff;
 }
 
 .news {
     position: relative;
-    width: 208px;
-    padding-bottom: 9px;
+    width: 210px;
+    margin-bottom: -20000px;
+    padding-bottom: 20000px;
     float: left;
-    overflow: hidden;
+    border-right: 1px solid #c7cacf;
+    border-left: 1px solid #c7cacf;
+    background-color: #edeef0;
+    box-sizing: border-box;
 }
 
 h2 {
